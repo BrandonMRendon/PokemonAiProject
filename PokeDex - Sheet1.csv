@@ -1,0 +1,10 @@
+Name,Types,Move1,Move2,Move3,Move4,Move1Type,Move2Type,Move3Type,Move4Type
+Bulbasaur,Grass/Poison,Leech Seed,Razor Leaf,Toxic,Body Slam,Grass,Grass,Poison,Normal
+Ivysaur,Grass/Poison,Razor Leaf,Sleep Powder,Double-Edge,Growth,Grass,Grass,Normal,Normal
+Venusaur,Grass/Poison,Leech Seed,Take Down,PoisonPowder,SolarBeam,Grass,Normal,Poison,Grass
+Charmander,Fire,Flamethrower,Fire Spin,Slash,Dig,Fire,Fire,Normal,Ground
+Charmeleon,Fire,Flamethrower,Strength,Counter,Seismic Toss,Fire,Normal,Fighting,Fighting
+Charizard,Fire/Flying,Fly,Fire Blast,Swords Dance,Fire Spin,Flying,Fire,Normal,Fire
+Squirtle,Water,Surf,Blizzard,Body Slam,Dig,Water,Ice,Normal,Ground
+Wartortle,Water,Surf,Ice Beam,Strength,Rest,Water,Ice,Normal,Psychic
+Blastoise,Water,Hydro Pump,Seismic Toss,Skull Bash,Withdraw,Water,Fighting,Normal,Water

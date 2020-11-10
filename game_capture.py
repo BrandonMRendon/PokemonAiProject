@@ -7,9 +7,10 @@ import cv2, pickle, PIL
 
 
 move_list = ["ABSORB", "ACID", "ACIDARMOR", "AGILITY", "AMNESIA", "AURORABEAM", "BARRAGE", "BARRIER", "BIDE", "BIND", "BITE", "BLIZZARD", "BODYSLAM", "BONECLUB", "BONEMERANG", "BUBBLE", "BUBBLEBEAM", "CLAMP", "COMETPUNCH", "CONFUSERAY", "CONFUSION", "CONSTRICT", "CONVERSION", "COUNTER", "CRABHAMMER", "CUT", "DEFENSECURL", "DIG", "DISABLE", "DIZZYPUNCH", "DOUBLEKICK", "DOUBLESLAP", "DOUBLETEAM", "DOUBLE-EDGE", "DRAGONRAGE", "DREAMEATER", "DRILLPECK", "EARTHQUAKE", "EGGBOMB", "EMBER", "EXPLOSION", "FIREBLAST", "FIREPUNCH", "FIRESPIN", "FISSURE", "FLAMETHROWER", "FLASH", "FLY", "FOCUSENERGY", "FURYATTACK", "FURYSWIPES", "GLARE", "GROWL", "GROWTH", "GUILLOTINE", "GUST", "HARDEN", "HAZE", "HEADBUTT", "HIGHJUMPKICK", "HORNATTACK", "HORNDRILL", "HYDROPUMP", "HYPERBEAM", "HYPERFANG", "HYPNOSIS", "ICEBEAM", "ICEPUNCH", "JUMPKICK", "KARATECHOP", "KINESIS", "LEECHLIFE", "LEECHSEED", "LEER", "LICK", "LIGHTSCREEN", "LOVELYKISS", "LOWKICK", "MEDITATE", "MEGADRAIN", "MEGAKICK", "MEGAPUNCH", "METRONOME", "MIMIC", "MINIMIZE", "MIRRORMOVE", "MIST", "NIGHTSHADE", "PAYDAY", "PECK", "PETALDANCE", "PINMISSILE", "POISONGAS", "POISONPOWDER", "POISONSTING", "POUND", "PSYBEAM", "PSYCHIC", "PSYWAVE", "QUICKATTACK", "RAGE", "RAZORLEAF", "RAZORWIND", "RECOVER", "REFLECT", "REST", "ROAR", "ROCKSLIDE", "ROCKTHROW", "ROLLINGKICK", "SANDATTACK", "SCRATCH", "SCREECH", "SEISMICTOSS", "SELF-DESTRUCT", "SHARPEN", "SING", "SKULLBASH", "SKYATTACK", "SLAM", "SLASH", "SLEEPPOWDER", "SLUDGE", "SMOG", "SMOKESCREEN", "SOFT-BOILED", "SOLARBEAM", "SONICBOOM", "SPIKECANNON", "SPLASH", "SPORE", "STOMP", "STRENGTH", "STRINGSHOT", "STRUGGLE", "STUNSPORE", "SUBMISSION", "SUBSTITUTE", "SUPERFANG", "SUPERSONIC", "SURF", "SWIFT", "SWORDSDANCE", "TACKLE", "TAILWHIP", "TAKEDOWN", "TELEPORT", "THRASH", "THUNDER", "THUNDERPUNCH", "THUNDERSHOCK", "THUNDERWAVE", "THUNDERBOLT", "TOXIC", "TRANSFORM", "TRIATTACK", "TWINEEDLE", "VINEWHIP", "VISEGRIP", "WATERGUN", "WATERFALL", "WHIRLWIND", "WINGATTACK", "WITHDRAW", "WRAP"]
+pokemon_list = ["VENUSAUR", "CHARIZARD", "BLASTOISE"]
 
 
-def get_text(image):  # ML model that gets the text on screen
+def get_text(image, is_pokemon):  # ML model that gets the text on screen
     model = keras.models.load_model('EMNIST.model')
     # Convert image
     model_string = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -20,7 +21,29 @@ def get_text(image):  # ML model that gets the text on screen
         result_string += model_string[result[i]]
     # print("I see \"" + result_string + "\"")
     # print("I predict this is \"" + correct_move_string(result_string) + "\"")
-    return correct_move_string(result_string)
+    if is_pokemon:
+        return correct_pokemon_string(result_string)
+    else:
+        return correct_move_string(result_string)
+
+
+def correct_pokemon_string(s):
+    result = ""
+    wrong = 0
+    prediction_index = -1
+    lowest = 13  # I think the largest possible pokemon has 13 characters
+    for i in range(len(pokemon_list)):
+        if len(s) == len(pokemon_list[i]):  # See if the current pokemon string is the same length as one in the move list
+            for j in range(len(s)):
+                if pokemon_list[i][j] != s[j]:
+                    wrong += 1
+            if wrong < lowest:
+                lowest = wrong
+                prediction_index = i
+            # print("Name: " + pokemon_list[i] + " Wrong: " + str(wrong))
+        wrong = 0
+    result = pokemon_list[prediction_index]
+    return result
 
 
 def correct_move_string(s):
@@ -82,9 +105,31 @@ def make_model():
     # model.save('MNIST_DATA.model')
 
 
-def get_move_list():
+def get_everything(filename):
+    get_pokemon_names(filename)
+    get_move_list('result.png')
+
+
+def get_pokemon_names(f):
     # Load an image into RGB colorspace from disk
-    image = cv2.imread('Venusaur_Set.png')  # BGR image
+    image = cv2.imread(f)  # RGB image
+    ally = image[156:207, 345:652]
+    enemy = image[751:809, 1272:1570]
+    # cv2.imshow('Image', ally)
+    # print(get_letters_from_word(ally, True))
+
+    image_draw = image.copy()
+    cv2.rectangle(image_draw, (343, 154), (654, 209), (0, 255, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(ally, True), (345, 140), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.rectangle(image_draw, (1270, 749), (1572, 811), (0, 255, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(enemy, True), (1250, 740), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+
+    cv2.imwrite('result.png', image_draw)
+
+
+def get_move_list(f):
+    # Load an image into RGB colorspace from disk
+    image = cv2.imread(f)  # BGR image
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Get the coordinates of 4 moves
@@ -105,21 +150,21 @@ def get_move_list():
     image_draw = image.copy()
     image_draw = cv2.cvtColor(image_draw, cv2.COLOR_BGR2RGB)
     cv2.rectangle(image_draw, (680, 88), (1090, 132), (0, 255, 0), 2)
-    cv2.putText(image_draw, get_letters_from_move(move_1), (675, 80), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(move_1, False), (675, 80), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
     cv2.rectangle(image_draw, (680, 178), (1024, 222), (0, 255, 0), 2)
-    cv2.putText(image_draw, get_letters_from_move(move_2), (675, 280), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(move_2, False), (675, 280), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
     cv2.rectangle(image_draw, (1223, 146), (1563, 190), (0, 255, 0), 2)
-    cv2.putText(image_draw, get_letters_from_move(move_3), (1210, 130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(move_3, False), (1210, 130), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
     cv2.rectangle(image_draw, (1155, 236), (1564, 280), (0, 255, 0), 2)
-    cv2.putText(image_draw, get_letters_from_move(move_4), (1155, 336), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+    cv2.putText(image_draw, get_letters_from_word(move_4, False), (1155, 336), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
     cv2.imwrite('result.png', image_draw)
 
 
-def get_letters_from_move(move):
+def get_letters_from_word(word, is_pokemon):
 
     '''
     All letters in screenshots (except 'I') are 26x38 (26 wide, 38 tall)
@@ -129,8 +174,9 @@ def get_letters_from_move(move):
     While loop is used here to increment 27 instead of 1.
     '''
 
-    gray = cv2.cvtColor(move, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(word, cv2.COLOR_BGR2GRAY)
     thresh = cv2.threshold(gray, 190, 255, cv2.THRESH_BINARY_INV)[1]
+    #cv2.imshow('Image', thresh)
     arr = np.asarray(thresh)
 
     letters_x = []
@@ -176,5 +222,5 @@ def get_letters_from_move(move):
         letter = cv2.resize(letter, (20, 20))
         letter = cv2.copyMakeBorder(letter, 4, 4, 4, 4, cv2.BORDER_CONSTANT, value=[0, 0, 0])
         letters.append(letter)
-    return get_text(letters)
+    return get_text(letters, is_pokemon)
 

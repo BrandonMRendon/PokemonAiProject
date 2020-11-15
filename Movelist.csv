@@ -1,0 +1,166 @@
+Name,NameCaps,Type,Category,Power,Accuracy,MaxPP
+Absorb,ABSORB,Grass,Special,20,100,25
+Acid,ACID,Poison,Physical,40,100,30
+Acid Armor,ACIDARMOR,Poison,Status,0,0,20
+Agility,AGILITY,Psychic,Status,0,0,30
+Amnesia,AMNESIA,Psychic,Status,0,0,20
+Aurora Beam,AURORABEAM,Ice,Special,65,100,20
+Barrage,BARRAGE,Normal,Physical,15,85,20
+Barrier,BARRIER,Psychic,Status,0,0,20
+Bide,BIDE,Normal,Physical,0,0,10
+Bind,BIND,Normal,Physical,15,85,20
+Bite,BITE,Normal,Physical,60,100,25
+Blizzard,BLIZZARD,Ice,Special,110,70,5
+Body Slam,BODYSLAM,Normal,Physical,85,100,15
+Bone Club,BONECLUB,Ground,Physical,65,85,20
+Bonemerang,BONEMERANG,Ground,Physical,50,90,10
+Bubble,BUBBLE,Water,Special,40,100,30
+Bubble Beam,BUBBLEBEAM,Water,Special,65,100,20
+Clamp,CLAMP,Water,Special,35,85,15
+Comet Punch,COMETPUNCH,Normal,Physical,18,85,15
+Confuse Ray,CONFUSERAY,Ghost,Status,0,100,10
+Confusion,CONFUSION,Psychic,Special,50,100,25
+Constrict,CONSTRICT,Normal,Physical,10,100,35
+Conversion,CONVERSION,Normal,Status,0,0,30
+Counter,COUNTER,Fighting,Physical,0,100,20
+Crabhammer,CRABHAMMER,Water,Special,100,90,10
+Cut,CUT,Normal,Physical,50,95,30
+Defense Curl,DEFENSECURL,Normal,Status,0,0,40
+Dig,DIG,Ground,Physical,80,100,10
+Disable,DISABLE,Normal,Status,0,100,20
+Dizzy Punch,DIZZYPUNCH,Normal,Physical,70,100,10
+Double Kick,DOUBLEKICK,Fighting,Physical,30,100,30
+Double Slap,DOUBLESLAP,Normal,Physical,15,85,10
+Double Team,DOUBLETEAM,Normal,Status,0,0,15
+Double-Edge,DOUBLE-EDGE,Normal,Physical,120,100,15
+Dragon Rage,DRAGONRAGE,Dragon,Special,0,100,10
+Dream Eater,DREAMEATER,Psychic,Special,100,100,15
+Drill Peck,DRILLPECK,Flying,Physical,80,100,20
+Earthquake,EARTHQUAKE,Ground,Physical,100,100,10
+Egg Bomb,EGGBOMB,Normal,Physical,100,75,10
+Ember,EMBER,Fire,Special,40,100,25
+Explosion,EXPLOSION,Normal,Physical,250,100,5
+Fire Blast,FIREBLAST,Fire,Special,110,85,5
+Fire Punch,FIREPUNCH,Fire,Special,75,100,15
+Fire Spin,FIRESPIN,Fire,Special,35,85,15
+Fissure,FISSURE,Ground,Physical,0,30,5
+Flamethrower,FLAMETHROWER,Fire,Special,90,100,15
+Flash,FLASH,Normal,Status,0,100,20
+Fly,FLY,Flying,Physical,90,95,15
+Focus Energy,FOCUSENERGY,Normal,Status,0,0,30
+Fury Attack,FURYATTACK,Normal,Physical,15,85,20
+Fury Swipes,FURYSWIPES,Normal,Physical,18,80,15
+Glare,GLARE,Normal,Status,0,100,30
+Growl,GROWL,Normal,Status,0,100,40
+Growth,GROWTH,Normal,Status,0,0,20
+Guillotine,GUILLOTINE,Normal,Physical,0,30,5
+Gust,GUST,Flying,Physical,40,100,35
+Harden,HARDEN,Normal,Status,0,0,30
+Haze,HAZE,Ice,Status,0,0,30
+Headbutt,HEADBUTT,Normal,Physical,70,100,15
+High Jump Kick,HIGHJUMPKICK,Fighting,Physical,130,90,10
+Horn Attack,HORNATTACK,Normal,Physical,65,100,25
+Horn Drill,HORNDRILL,Normal,Physical,0,30,5
+Hydro Pump,HYDROPUMP,Water,Special,110,80,5
+Hyper Beam,HYPERBEAM,Normal,Physical,150,90,5
+Hyper Fang,HYPERFANG,Normal,Physical,80,90,15
+Hypnosis,HYPNOSIS,Psychic,Status,0,60,20
+Ice Beam,ICEBEAM,Ice,Special,90,100,10
+Ice Punch,ICEPUNCH,Ice,Special,75,100,15
+Jump Kick,JUMPKICK,Fighting,Physical,100,95,10
+Karate Chop,KARATECHOP,Fighting,Physical,50,100,25
+Kinesis,KINESIS,Psychic,Status,0,80,15
+Leech Life,LEECHLIFE,Bug,Physical,80,100,10
+Leech Seed,LEECHSEED,Grass,Status,0,90,10
+Leer,LEER,Normal,Status,0,100,30
+Lick,LICK,Ghost,Physical,30,100,30
+Light Screen,LIGHTSCREEN,Psychic,Status,0,0,30
+Lovely Kiss,LOVELYKISS,Normal,Status,0,75,10
+Low Kick,LOWKICK,Fighting,Physical,0,100,20
+Meditate,MEDITATE,Psychic,Status,0,0,40
+Mega Drain,MEGADRAIN,Grass,Special,40,100,15
+Mega Kick,MEGAKICK,Normal,Physical,120,75,5
+Mega Punch,MEGAPUNCH,Normal,Physical,80,85,20
+Metronome,METRONOME,Normal,Status,0,0,10
+Mimic,MIMIC,Normal,Status,0,0,10
+Minimize,MINIMIZE,Normal,Status,0,0,10
+Mirror Move,MIRRORMOVE,Flying,Status,0,0,20
+Mist,MIST,Ice,Status,0,0,30
+Night Shade,NIGHTSHADE,Ghost,Physical,0,100,15
+Pay Day,PAYDAY,Normal,Physical,40,100,20
+Peck,PECK,Flying,Physical,35,100,35
+Petal Dance,PETALDANCE,Grass,Special,120,100,10
+Pin Missile,PINMISSILE,Bug,Physical,25,95,20
+Poison Gas,POISONGAS,Poison,Status,0,90,40
+Poison Powder,POISONPOWDER,Poison,Status,0,75,35
+Poison Sting,POISONSTING,Poison,Physical,15,100,35
+Pound,POUND,Normal,Physical,40,100,35
+Psybeam,PSYBEAM,Psychic,Special,65,100,20
+Psychic,PSYCHIC,Psychic,Special,90,100,10
+Psywave,PSYWAVE,Psychic,Special,0,100,15
+Quick Attack,QUICKATTACK,Normal,Physical,40,100,30
+Rage,RAGE,Normal,Physical,20,100,20
+Razor Leaf,RAZORLEAF,Grass,Special,55,95,25
+Razor Wind,RAZORWIND,Normal,Physical,80,100,10
+Recover,RECOVER,Normal,Status,0,0,10
+Reflect,REFLECT,Psychic,Status,0,0,20
+Rest,REST,Psychic,Status,0,0,10
+Roar,ROAR,Normal,Status,0,0,20
+Rock Slide,ROCKSLIDE,Rock,Physical,75,90,10
+Rock Throw,ROCKTHROW,Rock,Physical,50,90,15
+Rolling Kick,ROLLINGKICK,Fighting,Physical,60,85,15
+Sand Attack,SANDATTACK,Ground,Status,0,100,15
+Scratch,SCRATCH,Normal,Physical,40,100,35
+Screech,SCREECH,Normal,Status,0,85,40
+Seismic Toss,SEISMICTOSS,Fighting,Physical,0,100,20
+Self-Destruct,SELF-DESTRUCT,Normal,Physical,200,100,5
+Sharpen,SHARPEN,Normal,Status,0,0,30
+Sing,SING,Normal,Status,0,55,15
+Skull Bash,SKULLBASH,Normal,Physical,130,100,10
+Sky Attack,SKYATTACK,Flying,Physical,140,90,5
+Slam,SLAM,Normal,Physical,80,75,20
+Slash,SLASH,Normal,Physical,70,100,20
+Sleep Powder,SLEEPPOWDER,Grass,Status,0,75,15
+Sludge,SLUDGE,Poison,Physical,65,100,20
+Smog,SMOG,Poison,Physical,30,70,20
+Smokescreen,SMOKESCREEN,Normal,Status,0,100,20
+Soft-Boiled,SOFT-BOILED,Normal,Status,0,0,10
+Solar Beam,SOLARBEAM,Grass,Special,120,100,10
+Sonic Boom,SONICBOOM,Normal,Physical,0,90,20
+Spike Cannon,SPIKECANNON,Normal,Physical,20,100,15
+Splash,SPLASH,Normal,Status,0,0,40
+Spore,SPORE,Grass,Status,0,100,15
+Stomp,STOMP,Normal,Physical,65,100,20
+Strength,STRENGTH,Normal,Physical,80,100,15
+String Shot,STRINGSHOT,Bug,Status,0,95,40
+Struggle,STRUGGLE,Normal,Physical,50,0,0
+Stun Spore,STUNSPORE,Grass,Status,0,75,30
+Submission,SUBMISSION,Fighting,Physical,80,80,20
+Substitute,SUBSTITUTE,Normal,Status,0,0,10
+Super Fang,SUPERFANG,Normal,Physical,0,90,10
+Supersonic,SUPERSONIC,Normal,Status,0,55,20
+Surf,SURF,Water,Special,90,100,15
+Swift,SWIFT,Normal,Physical,60,0,20
+Swords Dance,SWORDSDANCE,Normal,Status,0,0,20
+Tackle,TACKLE,Normal,Physical,40,100,35
+Tail Whip,TAILWHIP,Normal,Status,0,100,30
+Take Down,TAKEDOWN,Normal,Physical,90,85,20
+Teleport,TELEPORT,Psychic,Status,0,0,20
+Thrash,THRASH,Normal,Physical,120,100,10
+Thunder,THUNDER,Electric,Special,110,70,10
+Thunder Punch,THUNDERPUNCH,Electric,Special,75,100,15
+Thunder Shock,THUNDERSHOCK,Electric,Special,40,100,30
+Thunder Wave,THUNDERWAVE,Electric,Status,0,90,20
+Thunderbolt,THUNDERBOLT,Electric,Special,90,100,15
+Toxic,TOXIC,Poison,Status,0,90,10
+Transform,TRANSFORM,Normal,Status,0,0,10
+Tri Attack,TRIATTACK,Normal,Physical,80,100,10
+Twineedle,TWINEEDLE,Bug,Physical,25,100,20
+Vine Whip,VINEWHIP,Grass,Special,45,100,25
+Vise Grip,VISEGRIP,Normal,Physical,55,100,30
+Water Gun,WATERGUN,Water,Special,40,100,25
+Waterfall,WATERFALL,Water,Special,80,100,15
+Whirlwind,WHIRLWIND,Normal,Status,0,0,20
+Wing Attack,WINGATTACK,Flying,Physical,60,100,35
+Withdraw,WITHDRAW,Water,Status,0,0,40
+Wrap,WRAP,Normal,Physical,15,90,20

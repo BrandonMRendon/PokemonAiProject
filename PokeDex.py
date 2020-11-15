@@ -37,8 +37,8 @@ def makeDex():
     df = pd.read_csv('PokeDex.csv')
     name = "Charizard"
     index = "Name", "Types", "Move1", "Move2", "Move3", "Move4", "Move1Type", "Move2Type", "Move3Type", "Move4Type", "HP", "Attack", "Defense", "Special", "Speed"
-    print(df)
-    print(df[index[0]][0])
+    # print(df)
+    # print(df[index[0]][0])
     count1=0
     while (count1 < 149):
         count2 = 0

@@ -19,6 +19,17 @@ class Pokemon:
     self.speed_stat = speed_stat
 
 
+class Move:
+    def __init__(self, name, name_caps, move_type, category, power, accuracy, max_pp):
+        self.name = name
+        self.name_caps = name_caps
+        self.move_type = move_type
+        self.category = category
+        self.power = power
+        self.accuracy = accuracy
+        self.max_pp = max_pp
+
+
 def printPoke(Pokemon):
     print(Pokemon.name + " ~ " + Pokemon.type + "\n")
     print(Pokemon.move1 + " ~ " + Pokemon.move1type + "\n")
@@ -32,10 +43,14 @@ def printPoke(Pokemon):
           + " SPD:" + str(Pokemon.speed_stat) + "\n\n")
 
 
+def print_move(move):
+    print("Move: " + move.name + "\n" + "Type: " + move.move_type + " (" + move.category + ")")
+    print("Power: [" + str(move.power) + "] " + "Accuracy: [" + str(move.accuracy) + "] " + "PP: [" + str(move.max_pp) + "/" + str(move.max_pp) + "]")
+
+
 def makeDex():
     PokeDex = []
     df = pd.read_csv('PokeDex.csv')
-    name = "Charizard"
     index = "Name", "Types", "Move1", "Move2", "Move3", "Move4", "Move1Type", "Move2Type", "Move3Type", "Move4Type", "HP", "Attack", "Defense", "Special", "Speed"
     # print(df)
     # print(df[index[0]][0])
@@ -50,6 +65,25 @@ def makeDex():
         count1+=1
         # printPoke(PokeDex[count1-1])
     return PokeDex  # return value for testing purposes, sorry Brandon. -Ian
+
+
+def make_moves():
+    """ Ian's move loading function """
+    moves = []
+    df = pd.read_csv('Movelist.csv')
+    index = "Name", "NameCaps", "Type", "Category", "Power", "Accuracy", "MaxPP"
+    i = 0
+    # print((df[index[0]]))
+    while i < len(df[index[0]]):
+        j = 0
+        move_data = []
+        while j < len(index):
+            move_data.append(df[index[j]][i])
+            j += 1
+        moves.append(Move(move_data[0], move_data[1], move_data[2], move_data[3], move_data[4], move_data[5], move_data[6]))
+        i += 1
+    return moves
+
 
 if __name__ == '__main__':
     makeDex()

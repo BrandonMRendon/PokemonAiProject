@@ -15,7 +15,7 @@ Body Slam,BODYSLAM,Normal,Physical,85,100,15
 Bone Club,BONECLUB,Ground,Physical,65,85,20
 Bonemerang,BONEMERANG,Ground,Physical,50,90,10
 Bubble,BUBBLE,Water,Special,40,100,30
-Bubble Beam,BUBBLEBEAM,Water,Special,65,100,20
+BubbleBeam,BUBBLEBEAM,Water,Special,65,100,20
 Clamp,CLAMP,Water,Special,35,85,15
 Comet Punch,COMETPUNCH,Normal,Physical,18,85,15
 Confuse Ray,CONFUSERAY,Ghost,Status,0,100,10
@@ -58,7 +58,7 @@ Gust,GUST,Flying,Physical,40,100,35
 Harden,HARDEN,Normal,Status,0,0,30
 Haze,HAZE,Ice,Status,0,0,30
 Headbutt,HEADBUTT,Normal,Physical,70,100,15
-High Jump Kick,HIGHJUMPKICK,Fighting,Physical,130,90,10
+Hi Jump Kick,HIGHJUMPKICK,Fighting,Physical,130,90,10
 Horn Attack,HORNATTACK,Normal,Physical,65,100,25
 Horn Drill,HORNDRILL,Normal,Physical,0,30,5
 Hydro Pump,HYDROPUMP,Water,Special,110,80,5
@@ -109,11 +109,11 @@ Roar,ROAR,Normal,Status,0,0,20
 Rock Slide,ROCKSLIDE,Rock,Physical,75,90,10
 Rock Throw,ROCKTHROW,Rock,Physical,50,90,15
 Rolling Kick,ROLLINGKICK,Fighting,Physical,60,85,15
-Sand Attack,SANDATTACK,Ground,Status,0,100,15
+Sand-Attack,SANDATTACK,Ground,Status,0,100,15
 Scratch,SCRATCH,Normal,Physical,40,100,35
 Screech,SCREECH,Normal,Status,0,85,40
 Seismic Toss,SEISMICTOSS,Fighting,Physical,0,100,20
-Self-Destruct,SELF-DESTRUCT,Normal,Physical,200,100,5
+Selfdestruct,SELF-DESTRUCT,Normal,Physical,200,100,5
 Sharpen,SHARPEN,Normal,Status,0,0,30
 Sing,SING,Normal,Status,0,55,15
 Skull Bash,SKULLBASH,Normal,Physical,130,100,10
@@ -123,9 +123,9 @@ Slash,SLASH,Normal,Physical,70,100,20
 Sleep Powder,SLEEPPOWDER,Grass,Status,0,75,15
 Sludge,SLUDGE,Poison,Physical,65,100,20
 Smog,SMOG,Poison,Physical,30,70,20
-Smokescreen,SMOKESCREEN,Normal,Status,0,100,20
+SmokeScreen,SMOKESCREEN,Normal,Status,0,100,20
 Soft-Boiled,SOFT-BOILED,Normal,Status,0,0,10
-Solar Beam,SOLARBEAM,Grass,Special,120,100,10
+SolarBeam,SOLARBEAM,Grass,Special,120,100,10
 Sonic Boom,SONICBOOM,Normal,Physical,0,90,20
 Spike Cannon,SPIKECANNON,Normal,Physical,20,100,15
 Splash,SPLASH,Normal,Status,0,0,40

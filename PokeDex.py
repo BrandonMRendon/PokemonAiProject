@@ -55,7 +55,7 @@ def makeDex():
     # print(df)
     # print(df[index[0]][0])
     count1=0
-    while (count1 < 149):
+    while (count1 < 150):
         count2 = 0
         data = []
         while (count2 < 15):

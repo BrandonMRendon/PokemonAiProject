@@ -1,7 +1,7 @@
 Name,Types,Move1,Move2,Move3,Move4,Move1Type,Move2Type,Move3Type,Move4Type,HP,Attack,Defense,Special,Speed
 Bulbasaur,Grass/Poison,Leech Seed,Razor Leaf,Toxic,Body Slam,Grass,Grass,Poison,Normal,45,49,49,65,45
 Ivysaur,Grass/Poison,Razor Leaf,Sleep Powder,Double-Edge,Growth,Grass,Grass,Normal,Normal,60,62,63,80,60
-Venusaur,Grass/Poison,Leech Seed,Take Down,PoisonPowder,SolarBeam,Grass,Normal,Poison,Grass,80,82,83,100,80
+Venusaur,Grass/Poison,Leech Seed,Take Down,Poison Powder,SolarBeam,Grass,Normal,Poison,Grass,80,82,83,100,80
 Charmander,Fire,Flamethrower,Fire Spin,Slash,Dig,Fire,Fire,Normal,Ground,39,52,43,50,65
 Charmeleon,Fire,Flamethrower,Strength,Counter,Seismic Toss,Fire,Normal,Fighting,Fighting,58,64,58,65,80
 Charizard,Fire/Flying,Fly,Fire Blast,Swords Dance,Fire Spin,Flying,Fire,Normal,Fire,78,84,78,85,100
@@ -105,7 +105,7 @@ Exeggutor,Grass/Psychic,Egg Bomb,Stun Spore,Leech Seed,Mega Drain,Normal,Grass,G
 Cubone,Ground,Earthquake,Strength,Submission,Blizzard,Ground,Normal,Fighting,Ice,50,50,95,40,35
 Marowak,Ground,Bonemerang,Focus Energy,Thrash,Fire Blast,Ground,Normal,Normal,Fire,60,80,110,50,45
 Hitmonlee,Fighting,Hi Jump Kick,Seismic Toss,Mega Kick,Metronome,Fighting,Fighting,Normal,Normal,50,120,53,35,87
-Hitmonchan,Fighting,Submission,Strength,ThunderPunch,Ice Punch,Fighting,Normal,Electric,Ice,50,105,79,35,76
+Hitmonchan,Fighting,Submission,Strength,Thunder Punch,Ice Punch,Fighting,Normal,Electric,Ice,50,105,79,35,76
 Lickitung,Normal,Strength,Fire Blast,Thunder,Blizzard,Normal,Fire,Electric,Ice,90,55,75,60,30
 Koffing,Poison,Sludge,Explosion,Toxic,Thunderbolt,Poison,Normal,Poison,Electric,40,65,95,60,35
 Weezing,Poison,Sludge,Selfdestruct,Hyper Beam,Fire Blast,Poison,Normal,Normal,Fire,65,90,120,85,60
@@ -123,7 +123,7 @@ Starmie,Water/Psychic,Surf,Thunder,Harden,Swift,Water,Electric,Normal,Normal,60,
 Mr. Mime,Psychic,Barrier,Seismic Toss,Psychic,Metronome,Psychic,Fighting,Psychic,Normal,40,45,65,100,90
 Scyther,Bug/Flying,Slash,Double Team,Wing Attack,Leer,Normal,Normal,Flying,Normal,70,110,80,55,105
 Jynx,Ice/Psychic,Lovely Kiss,Mega Punch,Ice Punch,Psychic,Normal,Normal,Ice,Psychic,65,50,35,95,95
-Electabuzz,Electric,ThunderPunch,Mega Punch,Thunder Wave,Psychic,Electric,Normal,Electric,Psychic,65,83,57,85,105
+Electabuzz,Electric,Thunder Punch,Mega Punch,Thunder Wave,Psychic,Electric,Normal,Electric,Psychic,65,83,57,85,105
 Magmar,Fire,Psychic,Fire Punch,SmokeScreen,Mega Punch,Psychic,Fire,Normal,Normal,65,95,57,85,93
 Pinsir,Bug,Strength,Seismic Toss,Harden,Guillotine,Normal,Fighting,Normal,Normal,65,125,100,55,85
 Tauros,Normal,Double-Edge,Bide,Fire Blast,Tail Whip,Normal,Normal,Fire,Normal,75,100,95,70,110
@@ -148,3 +148,4 @@ Moltres,Fire/Flying,Fire Blast,Substitute,Fly,Swift,Fire,Normal,Flying,Normal,90
 Dratini,Dragon,Hyper Beam,Thunder Wave,Body Slam,Thunderbolt,Normal,Electric,Normal,Electric,41,64,45,50,50
 Dragonair,Dragon,Hyper Beam,Thunder Wave,Swift,Ice Beam,Normal,Electric,Normal,Ice,61,84,65,70,70
 Dragonite,Dragon/Flying,Slam,Agility,Dragon Rage,Thunder,Normal,Psychic,Dragon,Electric,91,134,95,100,80
+--,Normal,--,--,--,--,Normal,Normal,Normal,Normal,0,0,0,0,0
